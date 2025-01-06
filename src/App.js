@@ -11,7 +11,7 @@ function App () {
   return <Router>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/movie" element={<Detail />} />
+      <Route path="/movie/:id" element={<Detail />} />
     </Routes>
   </Router>;
 }
@@ -25,3 +25,12 @@ export default App;
   - HashRouter: http://localhost:3000/#/movie 이런 형태가 됨
 */
 // Routes 컴포넌트를 넣어 준 이유는 한 번에 하나의 Route만 렌더링하기 위해서임
+
+// React Router는 다이나믹(동적) url 지원 ➡️ 다이나믹하다는 건 URL에 변수를 넣을 수 있다는 의미
+/*
+  [:id]
+  - 동적 라우팅을 위한 문법
+  - URL 경로에서 변경될 수 있는 부분을 나타냄
+  - 실제 URL에서 특정 영화의 고유 ID를 받아오는 부분이 됨
+  ➡️ URL에서 특정 값을 동적으로 받기 위한 방식
+*/
