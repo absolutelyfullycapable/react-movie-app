@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Movie ({ coverImg, title, year, genres, summary }) {
   // coverImg, title, year, genres, summary ➡️ props
@@ -7,7 +8,9 @@ function Movie ({ coverImg, title, year, genres, summary }) {
       <div className="thumb-img-box">
         <img src={coverImg} alt={`${title} poster`} />
       </div>
-      <p className="movie-tit">{title} ({year})</p>
+      <p className="movie-tit">
+        <Link to="/movie">{title} ({year})</Link>
+      </p>
       <ul className="movie-genres">
         {genres.map((genre) => <li key={genre}>{genre}</li>)}
       </ul>
