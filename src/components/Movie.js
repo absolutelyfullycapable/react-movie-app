@@ -5,7 +5,7 @@ import style from "./Movie.module.css"
 function Movie ({ coverImg, title, id, year, genres, summary }) {
   // coverImg, title, year, genres, summary ➡️ props (object)
   return (
-    <Link to={`/movie/${id}`} className={style.movie_item}>
+    <Link to={`${process.env.PUBLIC_URL}/movie/${id}`} className={style.movie_item}>
       <div className={style.thumb_img_box}>
         <img src={coverImg} alt={`${title} poster`} />
       </div>
@@ -14,7 +14,7 @@ function Movie ({ coverImg, title, id, year, genres, summary }) {
         <ul className={style.movie_genres}>
           {genres.map((genre) => <li key={genre}>{genre}</li>)}
         </ul>
-        <p className={style.movie_desc}>{summary}</p>
+        <p className={style.movie_desc}>{summary.length > 0 ? summary : "No Summary"}</p>
       </div>
     </Link>
   );
