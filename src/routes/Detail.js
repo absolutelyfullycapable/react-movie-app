@@ -40,3 +40,5 @@ function Detail () {
 }
 
 export default Detail;
+
+// await는 async 함수 내부에 있지 않으면 사용할 수 없음
