@@ -23,7 +23,7 @@ function Detail () {
       <div className={style.detail_wrap}>
         <Link to={`${process.env.PUBLIC_URL}/`} className={style.home_btn}>← GO TO HOME</Link>
         <h3 className={style.tit}>{detailMovie.title} ({detailMovie.year})</h3>
-        <p className="rate">★ {detailMovie.rating}</p>
+        <p className={style.rate}>★ {detailMovie.rating}</p>
         <ul className={style.movie_genres}>
           {detailMovie.genres.map((item, key) => {
             return <li key={key}>{item}</li>;

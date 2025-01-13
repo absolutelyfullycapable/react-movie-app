@@ -64,3 +64,18 @@
   word-break: keep-all;
   color: #666;
 }
+
+@media (max-width: 1024px) {
+	.movie_item {
+    width: 100%;
+  }
+
+  .movie_tit {
+    font-size: 18px;
+  }
+
+  .movie_desc {
+    font-size: 14px;
+    -webkit-line-clamp: 3;
+  }
+}
